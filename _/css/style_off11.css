@@ -120,7 +120,8 @@ button {width: auto; overflow: visible;}
 .clearfix:after { clear: both; }  
 .clearfix { zoom: 1; }  
 
-
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 
 /* Ok, this is where the fun starts.
 -------------------------------------------------------------------------------*/
@@ -132,14 +133,14 @@ body {font: 13px Helmet, Freesans, sans-serif;}
 	Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
 
 /* we like off-black for text */
-body, select, input, textarea {color: #333;}
+body, select, input, textarea {color: #fff;}
 
 a {color: #03f;}
 a:hover {color: #69f;}
 
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
-::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
-::selection {background: #fcd700; color: #fff; text-shadow: none;} 
+::-moz-selection{background: #fcd700; color: brown; text-shadow: none;}
+::selection {background: #fcd700; color: brown; text-shadow: none;} 
 
 /*	j.mp/webkit-tap-highlight-color */
 a:link {-webkit-tap-highlight-color: #fcd700;} 
@@ -153,9 +154,8 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
 /* new Linux- and Windows-friendly sans-serif font stack: http://mky.be/fontstack */
 body {
 	 font: 13px Helmet, Freesans, sans-serif;
-	 background-color: #80c1d6;
 	 background: #80c1d6 url(../img/large_header_logo.png) -80px 0px no-repeat;
-
+	 background: url(../img/large_header_logo.png) -80px 0px no-repeat, url(../img/blue_texture.png) 0 0 repeat #80c1d6 ;
 	 }
 	 
 	 
@@ -163,7 +163,7 @@ body {
 
 /* headinger i navigasjon */
 h1 {
-	 font-size: 54px;
+	 font-size: 52px;
 	 line-height: 1;
 	 text-shadow: #fff 2px 4px 0px;
 	 outline: 0px solid red;
@@ -179,18 +179,31 @@ header nav a {
 	 line-height: 1;
 	 }
 
-#obstacles h2 {
+/* headinger i seksjonene */
+#obstacles h2, #prizes h2, #contestant h2 {
 	font-size: 40px;
 	line-height: 1.25;
-	color: #fff;
 	background: url(../img/checker_stripe_full.gif) 300px 8px no-repeat transparent;
 	outline: 1px solid red;
+	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
 }
 
-#obstacles ul h3 {
+#obstacles ul h3, #prizes h3 {
 	font-size: 14px;
 	line-height: 1;
-	color: #fff;
+}
+
+/* overskrifter til det store feature-bildet */
+#feature_obstacle h3 {
+	font-size: 40px;
+	line-height: 1.49;
+	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
+}
+
+#feature_obstacle h4 {
+	font-size: 21px;
+	line-height: 1.33;
+	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
 }
 
 /* 3 TYPOGRAPHY 			============================================================================= */
@@ -236,7 +249,7 @@ body {
 
 	 }
 	 
-h1, section h2, section h3, section figure h3, section figure h4, section form {
+h1, section h2, section h3, section figure h3, section figure h4, section form input {
 	 font-family: KomikaTitle-Paint-webfont, sans-serif;
 
 	 }
@@ -266,8 +279,6 @@ img {
 /* 8 HEADER 				============================================================================= */
 
 header {
-	  max-width: 960px;
-	  margin: 0 auto;
 	  
 }
 
@@ -283,10 +294,16 @@ header h1{
 }
 
 header h2{
-	 color: #fff;
 	 text-align: center;
 	 padding-left: 10px;
 	 margin: 26px 0 80px 0;
+	  
+}
+
+header hgroup {
+	 max-width: 940px;
+	 margin-left: auto;
+	 margin-right: auto;
 	  
 }
 
@@ -324,17 +341,13 @@ nav ul li:last-child {
 	
 }
 
-nav ul a {
-	   color: #fff;
-	
-}
 
 /* 10 CONTENT 				============================================================================= */
 
 /* wrapper som brukes på alle seksjonene */
-.section_wrapper {
+.section_wrapper, footer {
 	   max-width: 940px;
-	   padding: 0 10px;
+	   padding: 0 10px 50px;
 	   margin: 0 auto;
 	   outline: 1px solid green;
 	   background: url(../img/grid.png) 10px 0 no-repeat
@@ -343,11 +356,12 @@ nav ul a {
 
 
 #obstacles {
-	background: url(../img/orange_border_tile.png) 0 0 repeat-x, url(../img/orange_texture.png) 0 0 repeat #fe6638;
+	background: url(../img/orange_border_tile.png) 0 bottom repeat-x, url(../img/orange_border_tile.png) 0 0 repeat-x, url(../img/orange_texture.png) 0 0 repeat #fe6638;
 	padding-top: 50px;
 	
 }
 
+/* spacing ned til innholdet */
 #obstacles h2 {
 	margin-bottom: 50px;
 	
@@ -431,15 +445,116 @@ nav ul a {
 }
 
 #obstacles #feature_obstacle {
-	width: 45%;
+	margin-top: 20px;
+	width: 42.1276595745%; /* 396px/940px */
+	padding-left: 34px;
+	float: left;
+	
+}
+
+#obstacles #feature_obstacle {
+	margin-top: 20px;
+	width: 42.1276595745%; /* 396px/940px */
+	padding-left: 34px;
+	float: left;
+	
+	
+}
+
+#obstacles #feature_obstacle figcaption {
+	
+  -webkit-transform: rotate(-7.5deg);  
+     -moz-transform: rotate(-7.5deg);  
+      -ms-transform: rotate(-7.5deg);  
+       -o-transform: rotate(-7.5deg);  
+          transform: rotate(-7.5deg);
+	outline: 1px solid black;
+}
+
+#obstacles #feature_obstacle figcaption hgroup {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#obstacles #feature_obstacle img {
+	margin-left: 5px;
+}
+
+/************ ny seksjon **********************/
+
+#prizes {
+	background: url(../img/green_border_tile_c.png) 0 bottom repeat-x ,url(../img/orange_border_tile.png) 0 top repeat-x, url(../img/green_texture.png) 0 0 repeat #80b238;
+	padding-top: 50px;
+	
+}
+
+#prizes h2 {
+	margin-bottom: 50px;
+	
+}
+
+#prizes h3 {
+	margin-top: 20px;
+	text-align: center;
+	line-height: 1;
+	
+}
+
+#prizes li {
+ display: inline-block;
+ vertical-align: top;
+ text-align: center;
+ padding-top: 80px;
+}
+
+#prizes .prize_wide {
+ width: 48.9361702128%;  /* 460px/940px */
+}
+
+#prizes .prize_normal {
+ width: 42.1276595745%;  /* 396px/940px */
+ margin-left: 54px;
+}
+
+/************ ny seksjon **********************/
+
+#contestant {
+	background: url(../img/footer_border_tile.png) 0 0 repeat-x, url(../img/blue_texture.png) 0 0 repeat #80c1d6;
+	padding-top: 50px;
+	
+}
+
+/* spacing ned til innholdet */
+#contestant h2 {
+	margin-bottom: 50px;
+	
+}
+
+#contestant figure{
 	float: right;
 	
 }
 
+#contestant form{
+	width: 40.4255319149%; /*380px/940px*/
+	float: left;
+	outline: 1px solid black;
+	
+}
 
-
-
-
+#contestant form input{
+	width: 100%; /*380px/940px*/
+	height: 50px;
+	padding-left: 10px;
+	margin-bottom: 16px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	line-height: 50px;
+	background-color: #fe6336;
+	border: 0px;
+	
+}
 
 
 /* 11 MAIN 					============================================================================= */
