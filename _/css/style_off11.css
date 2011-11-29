@@ -135,8 +135,8 @@ body {font: 13px Helmet, Freesans, sans-serif;}
 /* we like off-black for text */
 body, select, input, textarea {color: #fff;}
 
-a {color: #03f;}
-a:hover {color: #69f;}
+a {color: #fff;}
+a:hover {color: #fe6638;}
 
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: #fcd700; color: brown; text-shadow: none;}
@@ -154,8 +154,12 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
 /* new Linux- and Windows-friendly sans-serif font stack: http://mky.be/fontstack */
 body {
 	 font: 13px Helmet, Freesans, sans-serif;
-	 background: #80c1d6 url(../img/large_header_logo.png) -80px 0px no-repeat;
-	 background: url(../img/large_header_logo.png) -80px 0px no-repeat, url(../img/blue_texture.png) 0 0 repeat #80c1d6 ;
+	 background: url(../img/blue_texture.png) 0 0 repeat #80c1d6;
+	 background: url(../img/blue_texture.png) 0 0 repeat, url(../img/blue_splash.png) -80px 0px no-repeat #80c1d6;
+	 }
+
+.wrapper {
+	 background: transparent url(../img/contest_logo.png) 46% 72px no-repeat;
 	 }
 	 
 	 
@@ -163,15 +167,15 @@ body {
 
 /* headinger i navigasjon */
 h1 {
-	 font-size: 52px;
-	 line-height: 1;
+	 font-size: 53px;
+	 line-height: 97%;
 	 text-shadow: #fff 2px 4px 0px;
 	 outline: 0px solid red;
 	 }
 	 
 header h2{
 	 font-size: 22px;
-	 line-height: 1;
+	 line-height: 109%;
 }
 	 
 header nav a {
@@ -183,9 +187,13 @@ header nav a {
 #obstacles h2, #prizes h2, #contestant h2 {
 	font-size: 40px;
 	line-height: 1.25;
-	background: url(../img/checker_stripe_full.gif) 300px 8px no-repeat transparent;
-	outline: 1px solid red;
+	background: url(../img/checker_stripe_full.gif) 100% 8px no-repeat transparent;
+	outline: 0px solid red;
 	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
+}
+
+#contestant h2 {
+	background: url(../img/checker_stripe_small.gif) 100% 8px no-repeat transparent;
 }
 
 #obstacles ul h3, #prizes h3 {
@@ -204,6 +212,18 @@ header nav a {
 	font-size: 21px;
 	line-height: 1.33;
 	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
+}
+
+#contestant figcaption {
+	font-size: 40px;
+	line-height: 1.26;
+	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
+}
+
+footer h2{
+	font-size: 20px;
+	line-height: 1.2;
+	
 }
 
 /* 3 TYPOGRAPHY 			============================================================================= */
@@ -249,7 +269,7 @@ body {
 
 	 }
 	 
-h1, section h2, section h3, section figure h3, section figure h4, section form input {
+h1, section h2, section h3, section figure h3, section figure h4,section figure figcaption, section form input, section form select {
 	 font-family: KomikaTitle-Paint-webfont, sans-serif;
 
 	 }
@@ -259,6 +279,11 @@ section#contestant figure span {
 
 	 }
 
+	 
+form input, form select{
+	 font-size: 16px;
+	 line-height: 18px;
+	 }
 
 	 
 /* 4 LINKS 					============================================================================= */
@@ -276,6 +301,116 @@ img {
 
 /* 6 TABLES 				============================================================================= */
 /* 7 FORMS 					============================================================================= */
+
+#contestant form{
+	width: 40.4255319149%; /*380px/940px*/
+	float: left;
+	outline: 0px solid black;
+	
+}
+
+#contestant form input#submit{
+	margin-top: 38px;
+	height: 155px;
+	outline: 0px solid red;
+	font-size: 26px;
+	background: transparent url(../img/slime_entry.png) no-repeat 50% 50%;
+	border: 0px;
+	-webkit-transform: rotate(-7.5deg);  /* text shadow som brukes på alt annet enn h1 heading */
+     -moz-transform: rotate(-7.5deg);  
+      -ms-transform: rotate(-7.5deg);  
+       -o-transform: rotate(-7.5deg);  
+          transform: rotate(-7.5deg);
+	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
+	
+}
+
+#contestant form input{
+	width: 100%; /*380px/940px*/
+	padding: 12px 0 11px 10px; /* line-height er på 27px*/
+	margin-bottom: 16px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #fe6336;
+	border: 0px;
+	
+}
+
+div#selects-row {
+	width: 100%; /*380px/940px*/
+	outline: 0px solid black;
+}
+
+#contestant form label.custom-select{
+	position: relative;
+    display: inline-block;
+	outline: 0px solid red;
+}
+
+#contestant form select{
+	width: 220px; /*380px/940px*/
+	height: auto;
+	padding: 11px 0 10px 10px; /* justerer paddingen for å sentrere teksten i elementet */
+	position: relative;
+    display: inline-block;
+	margin-bottom: 16px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	background-color: #fe6336;
+	border: 0px;
+}
+
+#contestant form select#gender{
+	width: 139px; /*380px/940px*/
+}
+
+#contestant form label.aside{
+	float: right;
+	margin-right: -9px; /* alignment 10px for å gjøre elementet 10px større som input-elementene med deres padding-left: 10px width: 100%. Trekker fra 1px fordi elementet som holder custom control icon bidrar med 1px */
+}
+
+.custom-select select {
+    outline:none; /* remove focus ring from Webkit */  
+    -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
+    }
+
+/* for Webkit's CSS-only solution to replace native control -webkit-appearance: none  */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+        .custom-select select {
+            padding-right:51px;    
+        }
+    }
+    
+/* Since we removed the default focus styles, we have to add our own */
+.custom-select select:focus {
+        -webkit-box-shadow: 0 0 3px 1px #c00;
+        -moz-box-shadow: 0 0 3px 1px #c00;
+        box-shadow: 0 0 3px 1px #c00;
+    }
+    
+/* Select arrow styling right: position to cover native drowdown control */
+.custom-select:after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: 0;
+	display: block;
+    width: 51px;
+	height: 51px;
+    background: transparent url(../img/form_arrow.png) no-repeat;
+    pointer-events:none;
+    }
+    
+.no-pointer-events .custom-select:after {
+        content: none;
+    }
+	
+
+
+
+
 /* 8 HEADER 				============================================================================= */
 
 header {
@@ -283,19 +418,17 @@ header {
 }
 
 header hgroup{
-	  margin-top: 501px;
+	  margin-top: 506px;
 	  
 }
 
 header h1{
 	  color: #fe6537;
-	  padding-left: 10px;
 	  
 }
 
 header h2{
 	 text-align: center;
-	 padding-left: 10px;
 	 margin: 26px 0 80px 0;
 	  
 }
@@ -304,6 +437,19 @@ header hgroup {
 	 max-width: 940px;
 	 margin-left: auto;
 	 margin-right: auto;
+	 position:relative;
+}
+
+/* just to move the grid during page writing */
+
+header hgroup span {
+	 left: 0;
+	 right: 0;
+	 bottom: 0px;
+	 top: -600px;
+	 position: absolute;
+	 background: url(../img/grid.png) 0 -600px no-repeat;
+	 z-index: 2;
 	  
 }
 
@@ -331,7 +477,7 @@ nav ul {
 
 nav ul li {
 	   display:inline;
-	   padding-right: 1em;
+	   padding-right: 57px;
 	   vertical-align: middle;
 	
 }
@@ -349,27 +495,26 @@ nav ul li:last-child {
 	   max-width: 940px;
 	   padding: 0 10px 50px;
 	   margin: 0 auto;
-	   outline: 1px solid green;
-	   background: url(../img/grid.png) 10px 0 no-repeat
+	   outline: 0px solid green;
+	   background: url(../img/grid.png) 10px 0 no-repeat;
 	
 }
 
 
 #obstacles {
 	background: url(../img/orange_border_tile.png) 0 bottom repeat-x, url(../img/orange_border_tile.png) 0 0 repeat-x, url(../img/orange_texture.png) 0 0 repeat #fe6638;
-	padding-top: 50px;
+	padding-top: 45px;
 	
 }
 
 /* spacing ned til innholdet */
 #obstacles h2 {
-	margin-bottom: 50px;
+	margin-bottom: 62px;
 	
 }
 
 #obstacles ul {
 	width: 52.1276595745%; /* 490px/940px */
-	margin-top: 20px;
 	float: left;
 	
 }
@@ -400,43 +545,43 @@ nav ul li:last-child {
 
 #obstacles ul li figure img{
 	margin: 10px auto 10px;
-	outline: 1px solid red;
+	outline: 0px solid red;
 	
 }
 
 #obstacles ul li figure #tank_img {
 	margin-top: 35px; /* bildet er 152px høyt - 25px ekstra for å gjøre elementet 221px høyt i forhold til default verdier: fra selektor #obstacles ul li figure img */
-	outline: 1px solid red;
+	outline: 0px solid red;
 	
 }
 
 #obstacles ul li figure #slide_img {
 	margin-top: 19px; /* bildet er 168 px høyt - 9px ekstra for å gjøre elementet 221px høyt sammenlignet med #obstacles ul li figure img som setter default marginer for alle disse bildene */
-	outline: 1px solid red;
+	outline: 0px solid red;
 	
 }
 
 #obstacles ul li figure #wheel_img {
 	margin: 10px auto 23px; /* bildet er 164 px høyt - 13px ekstra for å gjøre elementet 221px høyt sammenlignet med #obstacles ul li figure img som setter default marginer for alle disse bildene */
-	outline: 1px solid red;
+	outline: 0px solid red;
 	
 }
 
 #obstacles ul li figure #hatch_img {
 	margin: 10px auto 26px; /* bildet er 161 px høyt - 16px ekstra for å gjøre elementet 221px høyt sammenlignet med #obstacles ul li figure img som setter default marginer for alle disse bildene */
-	outline: 1px solid red;
+	outline: 0px solid red;
 	
 }
 
 #obstacles ul li figure #pick_it_img {
 	margin: 10px auto 26px; /* bildet er 161 px høyt - 16px ekstra for å gjøre elementet 221px høyt sammenlignet med #obstacles ul li figure img som setter default marginer for alle disse bildene */
-	outline: 1px solid red;
+	outline: 0px solid red;
 	
 }
 
 #obstacles ul li figure #wringer_img {
 	margin: 10px auto 27px; /* bildet er 160 px høyt - 16px ekstra for å gjøre elementet 221px høyt sammenlignet med #obstacles ul li figure img som setter default marginer for alle disse bildene */
-	outline: 1px solid red;
+	outline: 0px solid red;
 	
 }
 
@@ -453,7 +598,6 @@ nav ul li:last-child {
 }
 
 #obstacles #feature_obstacle {
-	margin-top: 20px;
 	width: 42.1276595745%; /* 396px/940px */
 	padding-left: 34px;
 	float: left;
@@ -462,21 +606,23 @@ nav ul li:last-child {
 }
 
 #obstacles #feature_obstacle figcaption {
-	
-  -webkit-transform: rotate(-7.5deg);  
+	height: 206px;
+	background: transparent url(../img/green_obstacle_splash.png) no-repeat 50% top;
+	-webkit-transform: rotate(-7.5deg);  
      -moz-transform: rotate(-7.5deg);  
       -ms-transform: rotate(-7.5deg);  
        -o-transform: rotate(-7.5deg);  
           transform: rotate(-7.5deg);
-	outline: 1px solid black;
+	outline: 0px solid black;
 }
 
 #obstacles #feature_obstacle figcaption hgroup {
 	text-align: center;
-	margin-bottom: 50px;
+	padding-top: 15%;
 }
 
 #obstacles #feature_obstacle img {
+	margin-top: 50px;
 	margin-left: 5px;
 }
 
@@ -489,6 +635,7 @@ nav ul li:last-child {
 }
 
 #prizes h2 {
+	margin-top: 13px;
 	margin-bottom: 50px;
 	
 }
@@ -500,26 +647,40 @@ nav ul li:last-child {
 	
 }
 
-#prizes li {
- display: inline-block;
- vertical-align: top;
+#prizes ul{
+ float: left;
+ width: 393px;
  text-align: center;
- padding-top: 80px;
+ padding-top: 39px;
+ margin-left: 10.1063829787%; /* (49+46)/940px total width*/
 }
 
-#prizes .prize_wide {
- width: 48.9361702128%;  /* 460px/940px */
+#prizes ul#first_prize_column{
+ float: left;
+ width: 391px;
+ text-align: center;
+ padding-top: 39px;
+ margin-left: 3.6170212766%; /* 34px/940px total width*/
 }
 
-#prizes .prize_normal {
- width: 42.1276595745%;  /* 396px/940px */
- margin-left: 54px;
+#prizes ul li{
+ padding-bottom: 62px;
 }
+
+#prizes ul#first_prize_column li{
+ padding-bottom: 115px;
+}
+
+/* justerer spacing ned til neste seksjon */
+#prizes ul#first_prize_column li:last-child{
+ padding-bottom: 84px;
+}
+
 
 /************ ny seksjon **********************/
 
 #contestant {
-	background: url(../img/footer_border_tile.png) 0 0 repeat-x, url(../img/blue_texture.png) 0 0 repeat #80c1d6;
+	background: url(../img/contestant_border_tile.png) 0 0 repeat-x, url(../img/blue_texture.png) 0 0 repeat #80c1d6; /* footer_border_tile er en del av grafikkken som er laget for overgangen mellom prizes og*/
 	padding-top: 50px;
 	
 }
@@ -532,29 +693,35 @@ nav ul li:last-child {
 
 #contestant figure{
 	float: right;
+	width: 41.0638297872%; /*386px/940px*/
+	padding-right: 30px;
 	
 }
 
-#contestant form{
-	width: 40.4255319149%; /*380px/940px*/
-	float: left;
-	outline: 1px solid black;
+#contestant figure{
+	position: relative;
 	
 }
 
-#contestant form input{
-	width: 100%; /*380px/940px*/
-	height: 50px;
-	padding-left: 10px;
-	margin-bottom: 16px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	line-height: 50px;
-	background-color: #fe6336;
-	border: 0px;
+#contestant figure span{
+	position: absolute;
+	left: 23.3160621762%; /*90px/386 */
+	top: 80px;
+	font-size: 140px;
+	color: #f4ea00;
+	text-shadow: hsla(0, 0%, 0%, 1) 7px 11px 0px;
 	
 }
+
+
+
+#contestant figcaption{
+	width: 6.2em;
+	margin: 54px auto 0;
+	
+}
+
+
 
 
 /* 11 MAIN 					============================================================================= */
@@ -564,6 +731,40 @@ nav ul li:last-child {
 /* 12 COMPLEMENTARY 		============================================================================= */
 
 /* 13 CONTENTINFO 			============================================================================= */
+
+footer {
+	background: url(../img/footer_border.gif) left top repeat-x, url(../img/grid.png) 10px 0 no-repeat;
+	background-clip: content-box;
+	position: relative
+}
+
+
+footer a.home_page{
+	display: block;
+	position: absolute;
+	left: 42.5531914894%;
+	top: -35px;
+}
+
+footer h2{
+	text-align: center;
+	padding-top: 60px;
+	
+}
+
+footer div#intro{
+	width: 65.9574468085%; /* ((2*300px) + 20px)/940px; */
+	margin: 0 auto;
+	
+}
+
+footer div#intro p{
+	float: left;
+	width: 48.3870967742%; /* 300px/620px; */
+	
+}
+
+
 
 /* 14 GLOBAL OBJECTS 		============================================================================= */
 

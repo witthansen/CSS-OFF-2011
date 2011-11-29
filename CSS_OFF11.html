@@ -80,6 +80,7 @@
 		<hgroup>
 		<h1>The Web's messiest challenge&#33;</h1>
 		<h2>Airing Thursdays on the Knucklelodeon Network&#8482;</h2>
+		<span></span>
 		</hgroup>
 	</header>
 	
@@ -155,8 +156,8 @@
 		<div class="section_wrapper clearfix">
 			<h2>PRIZES</h2>
 			
-			<ul>
-				<li class="prize_wide">
+			<ul id="first_prize_column">
+				<li>
 					<a href="#">
 						<figure>
 							<img src="_/img/space_camp.png" alt="Open to read more on Space Camp" />
@@ -164,26 +165,29 @@
 						</figure>
 					</a>
 				</li>
-				<li class="prize_normal">
+				<li>
 					<a href="#">
 						<figure>
-							<img src="_/img/skateboard.gif" alt="Open to read more on this skateboard" />
-							<h3>A NASH SKATEBOARD</h3>
-						</figure>
-					</a>
-				</li>
-				<li class="prize_wide">
-					<a href="#">
-						<figure>
-							<img src="_/img/keyboard.gif" alt="Open to read more on this Casio keyboard" />
+							<img src="_/img/keyboard.png" alt="Open to read more on this Casio keyboard" />
 							<h3>A CASIO RAPMAN KEYBOARD&#33;</h3>
 						</figure>
 					</a>
 				</li>
-				<li class="prize_normal">
+			</ul>
+			<ul>
+				<li>
 					<a href="#">
 						<figure>
-							<img src="_/img/tv.gif" alt="Open to read more on this TV/VCR" />
+							<img src="_/img/skateboard.png" alt="Open to read more on this skateboard" />
+							<h3>A NASH SKATEBOARD</h3>
+						</figure>
+					</a>
+				</li>
+				
+				<li>
+					<a href="#">
+						<figure>
+							<img src="_/img/tv.png" alt="Open to read more on this TV/VCR" />
 							<h3>A 13 INCH TV/VCR COMBO&#33;</h3>
 						</figure>
 					</a>
@@ -199,43 +203,51 @@
 			<h2>BE A CONTESTANT</h2>
 			<figure>
 				<img src="_/img/clock.gif" alt="TICKING ClOCK" />
-				<h3>THE CLOCK IS TICKING&#33;</h3>
+				<span>60</span>
+				<figcaption>THE CLOCK IS TICKING&#33;</figcaption>
 			</figure>
 			<form id="participate"> 
 				<label for="name" class="visuallyhidden">Name</label> 
-				<input id="name" name="name" type="text" placeholder="YOUR NAME" /><br/> 
+				<input id="name" name="name" type="text" placeholder="YOUR NAME" /> 
 				<label for="email" class="visuallyhidden">Email</label> 
-				<input id="email" name="email" type="email" placeholder="EMAIL ADDRESS" /><br/>
+				<input id="email" name="email" type="email" placeholder="EMAIL ADDRESS" />
 				<label for="name" class="visuallyhidden">Name</label> 
-				<input id="name" name="name" type="text" placeholder="TEAM NAME" /><br/> 
-				<select>
-					<option value="" disabled="disabled">TEAM COLOR</option>
-					<option value="gunk green">GUNK GREEN</option>
-					<option value="spit white">SPIT WHITE</option>
-					<option value="blood red">BLOOD RED</option>
-					<option value="orange spirit">ORANGE SPIRIT</option>
-				</select>
-				<select>
-					<option value="" disabled="disabled">GENDER</option>
-					<option value="female">FEMALE</option>
-					<option value="male">MALE</option>
-				</select><br/>
-
+				<input id="name" name="name" type="text" placeholder="TEAM NAME" /> 
+				<div id="selects-row">
+					<label class="custom-select">
+						<select id="team-color">
+							<option value="" disabled="disabled">TEAM COLOR</option>
+							<option value="gunk green">GUNK GREEN</option>
+							<option value="spit white">SPIT WHITE</option>
+							<option value="blood red">BLOOD RED</option>
+							<option value="orange spirit">ORANGE SPIRIT</option>
+						</select>
+					</label>
+					<label class="custom-select aside">
+						<select id="gender">
+							<option value="" disabled="disabled">GENDER</option>
+							<option value="female">FEMALE</option>
+							<option value="male">MALE</option>
+						</select>
+					</label>
+				</div>
 				<label for="url" class="visuallyhidden">Blog</label> 
-				<input id="blog" name="url" type="url" placeholder="PROFILE PHOTO URL" /><br/>
-				<input type="submit" value="SUBMIT ENTRY"/> 
+				<input id="blog" name="url" type="url" placeholder="PROFILE PHOTO URL" />
+				<input type="submit" value="SUBMIT ENTRY&#33;" id="submit" /> 
 				
 			</form>
 		</div>
 	</section>
 	
 	<footer>
-		
+		<a href="#" class="home_page">
+			<img src="_/img/logo.png" alt="image link to the home page" />
+		</a>
 		<h2>The Knucklelodeon Network</h2>
-		
-		<p>The Knucklelodeon Network is not affiliated with Nickelodeon, nor is it an actual television network</p>
-		<p>Triple Dare contestents consent to potential physical bodily harm, like being burried alive by a giant waffle.</p>
-		
+		<div id="intro" class="clearfix">
+			<p>The Knucklelodeon Network is not affiliated with Nickelodeon, nor is it an actual television network</p>
+			<p>Triple Dare contestents consent to potential physical bodily harm, like being burried alive by a giant waffle.</p>
+		</div>
 		
 		<h3>Visit Our Studios</h3> 
 		<div class="vcard">
