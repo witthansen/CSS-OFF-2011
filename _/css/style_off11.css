@@ -198,7 +198,6 @@ header nav a {
 #obstacles h2, #prizes h2, #contestant h2 {
 	font-size: 40px;
 	line-height: 1.25;
-	background: url(../img/checker_stripe_full.gif) 100% 8px no-repeat transparent;
 	outline: 0px solid red;
 	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
 }
@@ -454,7 +453,9 @@ header {
 header hgroup{
 	  padding-top: 506px;
 	  background: transparent url(../img/contest_logo.png) 46% 41px no-repeat;
-	  
+	  max-width: 940px;
+	  margin: 0 auto;
+	  position:relative;	  
 }
 
 header h1{
@@ -469,10 +470,6 @@ header h2{
 	  
 }
 
-header hgroup {
-	 max-width: 940px;
-	 position:relative;
-}
 
 /* just to move the grid during page writing */
 
@@ -549,12 +546,27 @@ nav ul li:last-child {
 /* spacing ned til innholdet */
 #obstacles h2 {
 	margin-bottom: 62px;
+	width: 21.2765957447%; /* 200px/940x*/
+	float: left;
 	
+}
+
+#obstacles .fluid_checkers {
+	width: 70.7446808511%; /* 665px/940x*/
+	height: 50px;
+	background: url(../img/checker_stripe_full.gif) 0 8px repeat-x transparent;
+	float: right;
+	
+}
+
+.bgrepeatspace #obstacles .fluid_checkers {
+	background-repeat: round no-repeat; /* for supporting browsers */
 }
 
 #obstacles ul {
 	width: 52.1276595745%; /* 490px/940px */
 	float: left;
+	clear: both;
 	
 }
 
@@ -635,18 +647,11 @@ nav ul li:last-child {
 #obstacles #feature_obstacle {
 	margin-top: 20px;
 	width: 42.1276595745%; /* 396px/940px */
-	padding-left: 34px;
+	padding-left: 3.6170212766%; /* 34px/940px */
 	float: left;
 	
 }
 
-#obstacles #feature_obstacle {
-	width: 42.1276595745%; /* 396px/940px */
-	padding-left: 34px;
-	float: left;
-	
-	
-}
 
 #obstacles #feature_obstacle figcaption {
 	height: 206px;
@@ -911,7 +916,15 @@ header hgroup h1 {
 	line-height: 1.3;
 }
 
-} /* ends media queries for max-width: 1100px */
+#obstacles .fluid_checkers {
+	width: 60%; /* 665px/940x*/
+	height: 50px;
+	background: url(../img/checker_stripe_full.gif) 0 8px repeat-x transparent;
+	float: right;
+	
+}
+
+} /* ends media queries for max-width: 960px */
 
 
 
