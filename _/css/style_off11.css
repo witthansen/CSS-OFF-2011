@@ -135,7 +135,18 @@ body {font: 13px Helmet, Freesans, sans-serif;}
 /* we like off-black for text */
 body, select, input, textarea {color: #fff;}
 
-a {color: #fff;}
+a {
+  color: #fff;
+  -webkit-transition: color .4s ease-in-out;
+     -moz-transition: color .4s ease-in-out;
+       -o-transition: color .4s ease-in-out;
+          transition: color .4s ease-in-out;
+  -webkit-transition: background-color .4s ease-in-out;
+     -moz-transition: background-color .4s ease-in-out;
+       -o-transition: background-color .4s ease-in-out;
+          transition: background-color .4s ease-in-out;
+}
+
 a:hover {color: #fe6638;}
 
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
@@ -154,12 +165,12 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
 /* new Linux- and Windows-friendly sans-serif font stack: http://mky.be/fontstack */
 body {
 	 font: 13px Helmet, Freesans, sans-serif;
-	 background: url(../img/blue_texture.png) 0 0 repeat #80c1d6;
-	 background: url(../img/blue_texture.png) 0 0 repeat, url(../img/blue_splash.png) -80px 0px no-repeat #80c1d6;
+	 background: url(../img/blue_splash.png) -80px 0px no-repeat #80c1d6;
+	 
 	 }
 
 .wrapper {
-	 background: transparent url(../img/contest_logo.png) 46% 72px no-repeat;
+	background: url(../img/blue_texture.png) 0 0 repeat;
 	 }
 	 
 	 
@@ -220,7 +231,7 @@ header nav a {
 	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
 }
 
-footer h2{
+footer h2, footer h3{
 	font-size: 20px;
 	line-height: 1.2;
 	
@@ -284,7 +295,19 @@ form input, form select{
 	 font-size: 16px;
 	 line-height: 18px;
 	 }
+	 
 
+
+footer {
+	font-size: 14px;
+	line-height: 1.29;
+}
+
+
+
+.text_align_right {
+	text-align: right;
+}
 	 
 /* 4 LINKS 					============================================================================= */
 
@@ -322,7 +345,16 @@ img {
        -o-transform: rotate(-7.5deg);  
           transform: rotate(-7.5deg);
 	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
-	
+	opacity: 1;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+		 -o-transition: all .4s ease-in-out;
+		    transition: all .4s ease-in-out;
+}
+
+#contestant form input#submit:hover{
+	opacity: 0.75;
+	color: #FE6336;
 }
 
 #contestant form input{
@@ -417,13 +449,17 @@ header {
 	  
 }
 
+/* padding som skal holde på logoen */
+
 header hgroup{
-	  margin-top: 506px;
+	  padding-top: 506px;
+	  background: transparent url(../img/contest_logo.png) 46% 41px no-repeat;
 	  
 }
 
 header h1{
 	  color: #fe6537;
+	  text-align: center;
 	  
 }
 
@@ -435,8 +471,6 @@ header h2{
 
 header hgroup {
 	 max-width: 940px;
-	 margin-left: auto;
-	 margin-right: auto;
 	 position:relative;
 }
 
@@ -446,9 +480,9 @@ header hgroup span {
 	 left: 0;
 	 right: 0;
 	 bottom: 0px;
-	 top: -600px;
+	 top: 0px;
 	 position: absolute;
-	 background: url(../img/grid.png) 0 -600px no-repeat;
+	 background: url(../img/xgrid.png) 0 -600px no-repeat;
 	 z-index: 2;
 	  
 }
@@ -457,9 +491,14 @@ header hgroup span {
 
 /* 9 LAYOUT 				============================================================================= */
 .wrapper {
-		  outline: 0px solid brown;
-		  
+	outline: 0px solid brown; 
 }
+
+.float_right {
+	float: right; 
+}
+
+
 /* 9 NAVIGATION				============================================================================= */
 
 nav{
@@ -496,7 +535,7 @@ nav ul li:last-child {
 	   padding: 0 10px 50px;
 	   margin: 0 auto;
 	   outline: 0px solid green;
-	   background: url(../img/grid.png) 10px 0 no-repeat;
+	   background: url(../img/xgrid.png) 10px 0 no-repeat;
 	
 }
 
@@ -534,6 +573,10 @@ nav ul li:last-child {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	
+}
+
+#obstacles ul li a:hover {
+	background-color: #699031;	
 }
 
 #obstacles ul li figure{
@@ -676,6 +719,18 @@ nav ul li:last-child {
  padding-bottom: 84px;
 }
 
+#prizes ul li a img {
+       opacity: 1;
+	   -webkit-transition: opacity .4s ease-in-out;
+		-moz-transition: opacity .4s ease-in-out;
+		 -o-transition: opacity .4s ease-in-out;
+		  transition: opacity .4s ease-in-out;
+       }
+	
+#prizes ul li a:hover img {
+       opacity: 0.5;
+       }
+
 
 /************ ny seksjon **********************/
 
@@ -705,7 +760,7 @@ nav ul li:last-child {
 
 #contestant figure span{
 	position: absolute;
-	left: 23.3160621762%; /*90px/386 */
+	left: 20%; /*77px/386 */
 	top: 80px;
 	font-size: 140px;
 	color: #f4ea00;
@@ -733,9 +788,10 @@ nav ul li:last-child {
 /* 13 CONTENTINFO 			============================================================================= */
 
 footer {
-	background: url(../img/footer_border.gif) left top repeat-x, url(../img/grid.png) 10px 0 no-repeat;
+	background: url(../img/footer_border.png) left top repeat-x, url(../img/xgrid.png) 10px 0 no-repeat;
 	background-clip: content-box;
-	position: relative
+	position: relative;
+	text-align: center;
 }
 
 
@@ -744,25 +800,81 @@ footer a.home_page{
 	position: absolute;
 	left: 42.5531914894%;
 	top: -35px;
+	opacity: 1;
+	-webkit-transition: opacity .4s ease-in-out;
+	   -moz-transition: opacity .4s ease-in-out;
+		 -o-transition: opacity .4s ease-in-out;
+		    transition: opacity .4s ease-in-out;
+}
+
+footer a.home_page:hover{
+	opacity: 0.6;
 }
 
 footer h2{
-	text-align: center;
 	padding-top: 60px;
 	
 }
 
+footer h3{
+	padding-top: 34px;
+}
+
 footer div#intro{
-	width: 65.9574468085%; /* ((2*300px) + 20px)/940px; */
-	margin: 0 auto;
-	
+	width: 640px; /* ((2*300px) + 20px)/940px; */
+	margin-left: 160px;
+	margin-top: 16px;
 }
 
 footer div#intro p{
 	float: left;
-	width: 48.3870967742%; /* 300px/620px; */
+	width: 300px; /* 300px/620px; */
+	padding-right: 20px;
+	outline: 0px solid red;
+	text-align: left;
 	
 }
+
+footer div.studio_addresses {
+	width: 360px; /* ((2*300px) + 20px)/940px; */
+	margin-left: 300px;
+	margin-top: 10px;
+}
+
+footer div.vcard{
+	float: left;
+	width: 160px; /* 300px/620px; */
+	padding-right: 20px;
+	text-align: left;
+	outline: 0px solid red;
+	
+}
+
+footer hr {
+       border : 0;
+       height : 7px;
+       background : url(../img/footer_hr.png) 0 0 repeat-x;
+       margin : 40px 0 20px;
+       }
+	   
+footer figcaption {
+       text-align: center;
+	   padding-bottom: 20px;
+       }
+
+
+footer figure a {
+       opacity: 1;
+	   -webkit-transition: opacity .4s ease-in-out;
+		-moz-transition: opacity .4s ease-in-out;
+		 -o-transition: opacity .4s ease-in-out;
+		  transition: opacity .4s ease-in-out;
+       }
+	
+footer figure a:hover {
+       opacity: 0.5;
+       }
+
 
 
 
@@ -789,16 +901,17 @@ footer div#intro p{
 -------------------------------------------------------------------------------*/
 
 /* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width: 480px) {
-	
-		
+@media (max-width: 960px) {
+
+nav ul li {
+	   padding-right: 20px;	
 }
 
-@media all and (orientation: portrait) {
-	
+header hgroup h1 {
+	line-height: 1.3;
 }
 
-@media all and (orientation: landscape) {
-	
-}
+} /* ends media queries for max-width: 1100px */
+
+
 

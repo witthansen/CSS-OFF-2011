@@ -56,6 +56,10 @@
 	<!-- CSS: screen, mobile & print are all in the same file -->
 	<link rel="stylesheet" href="_/css/style_off11.css">
 	
+	<!--[if lt IE 8]>
+		<link rel="stylesheet" href="_/css/ie/ie7-and-less.css" />
+	<![endif]-->
+	
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
 	<script src="_/js/modernizr-1.7.min.js"></script>
 
@@ -202,7 +206,7 @@
 		<div class="section_wrapper clearfix">
 			<h2>BE A CONTESTANT</h2>
 			<figure>
-				<img src="_/img/clock.gif" alt="TICKING ClOCK" />
+				<img src="_/img/clock.png" alt="TICKING ClOCK" />
 				<span>60</span>
 				<figcaption>THE CLOCK IS TICKING&#33;</figcaption>
 			</figure>
@@ -245,37 +249,41 @@
 		</a>
 		<h2>The Knucklelodeon Network</h2>
 		<div id="intro" class="clearfix">
-			<p>The Knucklelodeon Network is not affiliated with Nickelodeon, nor is it an actual television network</p>
+			<p class="text_align_right">The Knucklelodeon Network is not affiliated with Nickelodeon, nor is it an actual television network</p>
 			<p>Triple Dare contestents consent to potential physical bodily harm, like being burried alive by a giant waffle.</p>
 		</div>
 		
 		<h3>Visit Our Studios</h3> 
-		<div class="vcard">
-			<p class="adr">
-				<span class="organization-name">The Knucklelodeon Network</span>
-				<span class="organization-unit">Studio West</span>
-				<span class="street-address">11 Slime Time Way</span><br>
-				<span class="locality">Sacramento</span>,
-				<span class="region">CA</span><span class="postal-code">94203</span><br>
-			</p>
+		<div class="studio_addresses clearfix">
+			<div class="vcard text_align_right">
+				<p class="adr">
+					<span class="organization-name visuallyhidden">The Knucklelodeon Network</span>
+					<span class="organization-unit visuallyhidden">Studio West</span>
+					<span class="street-address">11 Slime Time Way</span><br>
+					<span class="locality">Sacramento</span>,
+					<span class="region">CA</span><span class="postal-code">94203</span><br>
+				</p>
+			</div>
+			
+			<div class="vcard">
+				<p class="adr">
+					<span class="organization-name visuallyhidden">The Knucklelodeon Network</span>
+					<span class="organization-unit visuallyhidden">Studio East</span>
+					<span class="street-address">329 Gunk Road</span><br>
+					<span class="locality">Jacksonville</span>,
+					<span class="region">FL</span><span class="postal-code">32099</span><br>
+				</p>
+			</div>
 		</div>
 		
-		<div class="vcard">
-			<p class="adr">
-				<span class="organization-name">The Knucklelodeon Network</span>
-				<span class="organization-unit">Studio East</span>
-				<span class="street-address">329 Gunk Road</span><br>
-				<span class="locality">Jacksonville</span>,
-				<span class="region">FL</span><span class="postal-code">32099</span><br>
-			</p>
-		</div>
-
+		<hr>
 		
-		<p>This design is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</p>
-		<a href="#">
-			<img src="#" alt="Read more on the license" />
-		</a>
-
+		<figure>
+			<figcaption>This design is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 License</figcaption>
+			<a href="#">
+				<img src="_/img/CC_Licence.gif" alt="Read more on the license" />
+			</a>
+		</figure>
 		
 	</footer>
 
