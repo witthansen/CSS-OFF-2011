@@ -808,6 +808,18 @@ nav ul li:last-child {
 }
 @media (max-width: 520px) {
 
+#obstacles #feature_obstacle {
+	width: 236px; /* nå deles plassen bare med #feature_obstacles ul */
+	padding: 40px 0 0;
+	float: none;
+	margin: 0 auto;
+}
+
+#obstacles #feature_obstacle figcaption hgroup {
+	text-align: center;
+	padding-top: 20%;
+}
+
 
 /* overskrifter til det store feature-bildet */
 #feature_obstacle h3 {
@@ -843,17 +855,7 @@ nav ul li:last-child {
 	
 }
 
-#obstacles #feature_obstacle {
-	width: 220px; /* nå deles plassen bare med #feature_obstacles ul */
-	padding: 40px 0 0;
-	float: none;
-	margin: 0 auto;
-}
 
-#obstacles #feature_obstacle figcaption hgroup {
-	text-align: center;
-	padding-top: 20%;
-}
 
 } /* ends media queries for #obstacles and max-width: 520px */
 
