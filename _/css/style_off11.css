@@ -604,6 +604,7 @@ nav ul li:last-child {
 	
 }
 
+
 #obstacles ul li figure #tank_img {
 	margin-top: 35px; /* bildet er 152px høyt - 25px ekstra for å gjøre elementet 221px høyt i forhold til default verdier: fra selektor #obstacles ul li figure img */
 	outline: 0px solid red;

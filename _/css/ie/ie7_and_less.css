@@ -1,0 +1,6 @@
+﻿hr {
+       display : list-item;
+       list-style : url(hr.gif) inside;
+       filter : alpha(opacity=0);
+       width : 0;
+}
