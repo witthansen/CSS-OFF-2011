@@ -92,7 +92,7 @@
 		<div class="section_wrapper clearfix">
 			<h2>OBSTACLES</h2>
 			<div class="fluid_checkers"></div>
-			<ul>
+			<ul class="clearfix">
 				<li>
 					<a href="#">
 						<figure>
@@ -111,15 +111,15 @@
 				</li>
 				<li>
 					<a href="#">
-						<figure>
+						<figure id="hamster">
 							<img src="_/img/human_hamster_wheel.png" id="wheel_img" alt="Open to read more on The Tank" />
-							<h3>HUMAN HAMSTER WHEEL</h3>
+							<h3 id="fittext_hamster">HUMAN&nbsp;HAMSTER&nbsp;WHEEL</h3>
 						</figure>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<figure>
+						<figure id="hatch">
 							<img src="_/img/the_hatch.png" id="hatch_img" alt="Open to read more on The Tank" />
 							<h3>THE HATCH</h3>
 						</figure>
@@ -160,7 +160,7 @@
 		<div class="section_wrapper clearfix">
 			<h2>PRIZES</h2>
 			
-			<ul id="first_prize_column">
+			<ul id="first_prize_column clearfix">
 				<li>
 					<a href="#">
 						<figure>
@@ -297,6 +297,14 @@
 
 <!-- this is where we put our custom functions -->
 <script src="_/js/functions.js"></script>
+
+<!-- fit-text for single responsive words -->
+<script src="_/js/jquery.fittext.js"></script>
+	<script type="text/javascript">
+		$("#fittext").fitText();
+		$("#fittext").fitText(1.2);
+		$("#fittext").fitText(1.1, { minFontSize: '9', maxFontSize: '14px' });
+	</script>
 
 <!-- Asynchronous google analytics; this is the official snippet.
 	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.

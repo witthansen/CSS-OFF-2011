@@ -546,7 +546,7 @@ nav ul li:last-child {
 /* spacing ned til innholdet */
 #obstacles h2 {
 	margin-bottom: 62px;
-	width: 21.2765957447%; /* 200px/940x*/
+	/* width: 21.2765957447%;  200px/940x*/
 	float: left;
 	
 }
@@ -599,7 +599,7 @@ nav ul li:last-child {
 }
 
 #obstacles ul li figure img{
-	margin: 10px auto 10px;
+	margin: 10px 0 10px;
 	outline: 0px solid red;
 	
 }
@@ -615,6 +615,10 @@ nav ul li:last-child {
 	margin-top: 19px; /* bildet er 168 px høyt - 9px ekstra for å gjøre elementet 221px høyt sammenlignet med #obstacles ul li figure img som setter default marginer for alle disse bildene */
 	outline: 0px solid red;
 	
+}
+
+#obstacles ul li figure{
+	width: 90%; /* bredden av hamster wheel med tekst: 198px/220px*/
 }
 
 #obstacles ul li figure #wheel_img {
@@ -674,6 +678,184 @@ nav ul li:last-child {
 	margin-top: 50px;
 	margin-left: 5px;
 }
+
+@media (max-width: 960px) {
+
+#obstacles .fluid_checkers {
+	width: 60%; /* 665px/940x*/ 
+	width: 70.7446808511%; /* 665px/940x*/
+	height: 50px;
+	background: url(../img/checker_stripe_full.gif) 0 8px repeat-x transparent;
+	float: right;
+	
+}
+
+#obstacles h2, #prizes h2, #contestant h2 {
+	font-size: 40px;
+	line-height: 1.25;
+	outline: 0px solid red;
+	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
+}
+
+#obstacles h2 {
+	margin-bottom: 42px;
+	width: 21.2765957447%; /* 200px/940x*/
+	float: left;
+	
+}
+
+#obstacles ul li figure h3{
+	font-size: 12px;
+}
+
+
+} /* ends media queries for #obstacles and max-width: 960px */
+
+@media (max-width: 840px) {
+
+#obstacles .fluid_checkers {
+	width: 64%; /* 665px/940x*/	
+}
+
+/* overskrifter til det store feature-bildet */
+#feature_obstacle h3 {
+	font-size: 32px;
+	line-height: 1.49;
+	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
+}
+
+#feature_obstacle h4 {
+	font-size: 17px;
+	line-height: 1.33;
+	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
+}
+
+#obstacles #feature_obstacle figcaption hgroup {
+	text-align: center;
+	padding-top: 20%;
+}
+
+#obstacles #feature_obstacle {
+	width: 42.4537037037%; /* nå deles plassen bare med #feature_obstacles ul */
+	padding-left: 0;
+	padding-right: 2.5462962963%; /* regnet ut proporsjonalt mot margin på li elementene */
+}
+
+#obstacles ul {
+	width: 55%; /* nå deles plassen bare med #feature_obstacle*/
+}
+
+#obstacles ul li {
+	width: 47.9166666667%; /* 230px/480 proporsjoner full størrelse */
+	margin-right: 2.0833333333%; /* 10px/480px */
+	margin-bottom: 10px;
+}
+
+#obstacles ul li figure h3{
+	font-size: 12px;
+}
+
+
+
+} /* ends media queries for #obstacles and max-width: 840px */
+
+@media (max-width: 740px) {
+
+#obstacles .fluid_checkers {
+	width: 60%; /* 665px/940x*/	
+}
+
+#obstacles #feature_obstacle {
+	width: 400px; /* nå deles plassen bare med #feature_obstacles ul */
+	padding: 70px 0 0;
+	float: none;
+	margin: 0 auto;
+}
+
+#obstacles #feature_obstacle figcaption hgroup {
+	text-align: center;
+	padding-top: 20%;
+}
+
+
+
+#obstacles ul {
+	width: 480px; /* nå deles plassen bare med #feature_obstacle*/
+	float: none;
+	margin: 0 auto;
+}
+
+#obstacles ul li {
+	width: 220px; /* 230px/480 proporsjoner full størrelse */
+	margin-right: 20px; /* 10px/480px */
+	margin-bottom: 20px;
+}
+
+} /* ends media queries for #obstacles and max-width: 750px */
+
+@media (max-width: 660px) {
+
+#obstacles .fluid_checkers {
+	display: none;
+}
+
+#obstacles h2 {
+    float: none;
+	margin: 0 auto 42px;
+	width: 250px;
+}
+
+}
+@media (max-width: 520px) {
+
+
+/* overskrifter til det store feature-bildet */
+#feature_obstacle h3 {
+	font-size: 28px;
+	line-height: 1.2;
+	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
+	padding-bottom: 5px;
+}
+
+#feature_obstacle h4 {
+	font-size: 14px;
+	line-height: 1.2;
+	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
+}
+
+/* spacing over bilde */
+
+#obstacles #feature_obstacle img {
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+#obstacles ul {
+	width: 220px; /* nå deles plassen bare med #feature_obstacle*/
+	margin: 0 auto;
+}
+
+#obstacles ul li {
+	width: 220px; /* 220px - full størrelse */
+	margin-bottom: 20px;
+	margin-right: 0;
+	float: none;
+	
+}
+
+#obstacles #feature_obstacle {
+	width: 220px; /* nå deles plassen bare med #feature_obstacles ul */
+	padding: 40px 0 0;
+	float: none;
+	margin: 0 auto;
+}
+
+#obstacles #feature_obstacle figcaption hgroup {
+	text-align: center;
+	padding-top: 20%;
+}
+
+} /* ends media queries for #obstacles and max-width: 520px */
 
 /************ ny seksjon **********************/
 
@@ -915,14 +1097,6 @@ nav ul li {
 
 header hgroup h1 {
 	line-height: 1.3;
-}
-
-#obstacles .fluid_checkers {
-	width: 60%; /* 665px/940x*/
-	height: 50px;
-	background: url(../img/checker_stripe_full.gif) 0 8px repeat-x transparent;
-	float: right;
-	
 }
 
 } /* ends media queries for max-width: 960px */
