@@ -527,6 +527,28 @@ nav ul li:last-child {
 	
 }
 
+/* skjuler select menyen som kommer opp på små skjermer */
+
+nav select {
+  display: none;
+}
+
+@media (max-width: 600px) {
+
+nav ul     { display: none; }
+nav select {
+	display: block;
+	float: right;
+	color: #80b238;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+} /* ends media queries for #prizes and max-width: 500px */
+
+ 
+
+
 
 /* 10 CONTENT 				============================================================================= */
 
@@ -871,6 +893,20 @@ nav ul li:last-child {
 	
 }
 
+#prizes h2:after {
+  content: "";
+  float: right;
+  width: 70.7446808511%; /* 665px/940x*/
+  height: 50px;
+  background: url(../img/checker_stripe_full.gif) 0 8px no-repeat transparent;
+  background-repeat: round no-repeat; /* for supporting browsers */
+}
+
+/* modernizr */
+.bgrepeatspace #obstacles .fluid_checkers {
+	
+}
+
 #prizes h3 {
 	margin-top: 20px;
 	text-align: center;
@@ -920,6 +956,10 @@ nav ul li:last-child {
 	   
 @media (max-width: 600px) {
 
+#prizes h2:after {
+  width: 65%; /* 665px/940x*/
+}
+
 #prizes ul{
  float: none;
  width: 65.5%; /* 393px/600px total width*/
@@ -953,8 +993,22 @@ nav ul li:last-child {
 #prizes ul#first_prize_column li:last-child{
  padding-bottom: 50px;
 }
-} /* ends media queries for #obstacles and max-width: 520px */
+} /* ends media queries for #prizes and max-width: 600px */
 
+
+@media (max-width: 500px) {
+
+#prizes h2:after {
+  display: none;
+}
+
+#prizes h2 {
+	width: 155px;
+    margin: 0 auto;
+	
+}
+
+} /* ends media queries for #prizes and max-width: 500px */
 
 /************ ny seksjon **********************/
 
@@ -1045,30 +1099,32 @@ footer h3{
 }
 
 footer div#intro{
-	width: 640px; /* ((2*300px) + 20px)/940px; */
-	margin-left: 160px;
+	width: 68.085106383%; /* 640((2*300px) + 2*20px)/940px; */
+	margin-left: 17.0212765957%; /* 160px/940px; */
 	margin-top: 16px;
 }
 
 footer div#intro p{
 	float: left;
-	width: 300px; /* 300px/620px; */
-	padding-right: 20px;
+	width: 46.875%; /* 300px/640px; */
+	padding-right: 3.125%; /* 20px/640px; */
 	outline: 0px solid red;
+}
+
+footer p{
 	text-align: left;
-	
 }
 
 footer div.studio_addresses {
-	width: 360px; /* ((2*300px) + 20px)/940px; */
-	margin-left: 300px;
+	width: 38.2978723404%; /* 360px((2*160px) + 2*20px)/940px; */
+	margin-left: 31.914893617%; /* 300/940px; */
 	margin-top: 10px;
 }
 
 footer div.vcard{
 	float: left;
-	width: 160px; /* 300px/620px; */
-	padding-right: 20px;
+	width: 44.4444444444%; /* 160px/360; */
+	padding-right: 5.5555555556%; /* 20px/360; */
 	text-align: left;
 	outline: 0px solid red;
 	
@@ -1099,7 +1155,14 @@ footer figure a:hover {
        opacity: 0.5;
        }
 
+@media (max-width: 800px) {
 
+ footer {
+    font-size: 14px;
+    line-height: 1.29;
+}
+
+} /* ends media queries for #prizes and max-width: 500px */
 
 
 /* 14 GLOBAL OBJECTS 		============================================================================= */
