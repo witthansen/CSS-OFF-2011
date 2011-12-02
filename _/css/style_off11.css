@@ -211,6 +211,10 @@ header nav a {
 	line-height: 1;
 }
 
+#prizes h3 {
+	line-height: 1.4;
+}
+
 /* overskrifter til det store feature-bildet */
 #feature_obstacle h3 {
 	font-size: 40px;
@@ -532,7 +536,7 @@ nav ul li:last-child {
 	   padding: 0 10px 50px;
 	   margin: 0 auto;
 	   outline: 0px solid green;
-	   background: url(../img/xgrid.png) 10px 0 no-repeat;
+	   background: url(../img/grid.png) 10px 0 no-repeat;
 	
 }
 
@@ -547,20 +551,21 @@ nav ul li:last-child {
 #obstacles h2 {
 	margin-bottom: 62px;
 	/* width: 21.2765957447%;  200px/940x*/
-	float: left;
 	
 }
 
-#obstacles .fluid_checkers {
-	width: 70.7446808511%; /* 665px/940x*/
-	height: 50px;
-	background: url(../img/checker_stripe_full.gif) 0 8px repeat-x transparent;
-	float: right;
-	
+#obstacles h2:after {
+  content: "";
+  float: right;
+  width: 70.7446808511%; /* 665px/940x*/
+  height: 50px;
+  background: url(../img/checker_stripe_full.gif) 0 8px no-repeat transparent;
+  background-repeat: round no-repeat; /* for supporting browsers */
 }
 
+/* modernizr */
 .bgrepeatspace #obstacles .fluid_checkers {
-	background-repeat: round no-repeat; /* for supporting browsers */
+	
 }
 
 #obstacles ul {
@@ -681,13 +686,10 @@ nav ul li:last-child {
 
 @media (max-width: 960px) {
 
-#obstacles .fluid_checkers {
-	width: 60%; /* 665px/940x*/ 
-	width: 70.7446808511%; /* 665px/940x*/
-	height: 50px;
-	background: url(../img/checker_stripe_full.gif) 0 8px repeat-x transparent;
-	float: right;
-	
+/* sizing of checkered pattern */
+
+#obstacles h2:after {
+  width: 68%; 
 }
 
 #obstacles h2, #prizes h2, #contestant h2 {
@@ -698,10 +700,7 @@ nav ul li:last-child {
 }
 
 #obstacles h2 {
-	margin-bottom: 42px;
-	width: 21.2765957447%; /* 200px/940x*/
-	float: left;
-	
+	margin-bottom: 42px;	
 }
 
 #obstacles ul li figure h3{
@@ -713,8 +712,8 @@ nav ul li:last-child {
 
 @media (max-width: 840px) {
 
-#obstacles .fluid_checkers {
-	width: 64%; /* 665px/940x*/	
+#obstacles h2:after {
+  width: 64%; 
 }
 
 /* overskrifter til det store feature-bildet */
@@ -761,8 +760,8 @@ nav ul li:last-child {
 
 @media (max-width: 740px) {
 
-#obstacles .fluid_checkers {
-	width: 60%; /* 665px/940x*/	
+#obstacles h2:after {
+  width: 60%; 
 }
 
 #obstacles #feature_obstacle {
@@ -795,12 +794,11 @@ nav ul li:last-child {
 
 @media (max-width: 660px) {
 
-#obstacles .fluid_checkers {
-	display: none;
+#obstacles h2:after {
+  display: none; 
 }
 
 #obstacles h2 {
-    float: none;
 	margin: 0 auto 42px;
 	width: 250px;
 }
@@ -882,15 +880,14 @@ nav ul li:last-child {
 
 #prizes ul{
  float: left;
- width: 393px;
+ width: 41.8085106383%; /* 393px/940px total width*/
  text-align: center;
  padding-top: 39px;
  margin-left: 10.1063829787%; /* (49+46)/940px total width*/
 }
 
 #prizes ul#first_prize_column{
- float: left;
- width: 391px;
+ width: 41.5957446809%; /* 391px/940px total width*/
  text-align: center;
  padding-top: 39px;
  margin-left: 3.6170212766%; /* 34px/940px total width*/
@@ -920,6 +917,43 @@ nav ul li:last-child {
 #prizes ul li a:hover img {
        opacity: 0.5;
        }
+	   
+@media (max-width: 600px) {
+
+#prizes ul{
+ float: none;
+ width: 65.5%; /* 393px/600px total width*/
+ text-align: center;
+ padding-top: 39px;
+ margin: 0 auto 0;
+}
+
+#prizes ul#first_prize_column{
+ width: 65.1666666667%; /* 391px/940px total width*/
+ text-align: center;
+ padding-top: 39px;
+ margin: 0 auto 0;
+}
+
+#prizes h3 {
+ line-height: 1.4;
+}
+
+/* reduserer space mellom elementert i linearisert prize module */
+
+#prizes ul li{
+ padding-bottom: 50px;
+}
+
+#prizes ul#first_prize_column li{
+ padding-bottom: 50px;
+}
+
+/* justerer spacing ned til neste seksjon */
+#prizes ul#first_prize_column li:last-child{
+ padding-bottom: 50px;
+}
+} /* ends media queries for #obstacles and max-width: 520px */
 
 
 /************ ny seksjon **********************/
