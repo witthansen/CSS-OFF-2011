@@ -558,7 +558,7 @@ nav select {
 	   padding: 0 10px 50px;
 	   margin: 0 auto;
 	   outline: 0px solid green;
-	   background: url(../img/grid.png) 10px 0 no-repeat;
+	   background: url(../img/xgrid.png) 10px 0 no-repeat;
 	
 }
 
@@ -787,7 +787,7 @@ nav select {
 }
 
 #obstacles #feature_obstacle {
-	width: 400px; /* nå deles plassen bare med #feature_obstacles ul */
+	width: 320px; /* nå deles plassen bare med #feature_obstacles ul */
 	padding: 70px 0 0;
 	float: none;
 	margin: 0 auto;
@@ -801,7 +801,7 @@ nav select {
 
 
 #obstacles ul {
-	width: 480px; /* nå deles plassen bare med #feature_obstacle*/
+	width: 480px; /* */
 	float: none;
 	margin: 0 auto;
 }
@@ -812,7 +812,7 @@ nav select {
 	margin-bottom: 20px;
 }
 
-} /* ends media queries for #obstacles and max-width: 750px */
+} /* ends media queries for #obstacles and max-width: 740px */
 
 @media (max-width: 660px) {
 
@@ -825,14 +825,21 @@ nav select {
 	width: 250px;
 }
 
-}
+} /* ends media queries for #obstacles and max-width: 660px */
+
 @media (max-width: 520px) {
 
 #obstacles #feature_obstacle {
-	width: 236px; /* nå deles plassen bare med #feature_obstacles ul */
+	width: 236px; /*  */
 	padding: 40px 0 0;
 	float: none;
 	margin: 0 auto;
+}
+
+#obstacles #feature_obstacle img {
+	width: 200px;
+	padding-left: 15px;
+	
 }
 
 #obstacles #feature_obstacle figcaption hgroup {
@@ -878,6 +885,7 @@ nav select {
 
 
 } /* ends media queries for #obstacles and max-width: 520px */
+
 
 /************ ny seksjon **********************/
 
@@ -1066,18 +1074,19 @@ nav select {
 /* 13 CONTENTINFO 			============================================================================= */
 
 footer {
-	background: url(../img/footer_border.png) left top repeat-x, url(../img/xgrid.png) 10px 0 no-repeat;
-	background-clip: content-box;
-	position: relative;
+	
 	text-align: center;
 }
 
+footer #footer_wrapper{
+	background: url(../img/footer_border.png) left top repeat-x, url(../img/xgrid.png) 10px 0 no-repeat;
+}
 
 footer a.home_page{
 	display: block;
-	position: absolute;
-	left: 42.5531914894%;
-	top: -35px;
+	width: 134px;
+	height: 85px;
+	margin: 0 auto 0;
 	opacity: 1;
 	-webkit-transition: opacity .4s ease-in-out;
 	   -moz-transition: opacity .4s ease-in-out;
@@ -1085,12 +1094,16 @@ footer a.home_page{
 		    transition: opacity .4s ease-in-out;
 }
 
+footer a.home_page img{
+ margin-top: -35px;
+}
+
 footer a.home_page:hover{
 	opacity: 0.6;
 }
 
 footer h2{
-	padding-top: 60px;
+	margin-top: -13px;
 	
 }
 
@@ -1165,11 +1178,11 @@ footer figure a:hover {
 /* presser de to tekstblokkene mot sentrum */
 
 footer div#intro{
-	margin-left: 18%; 
+	margin-left: 16%; /* manuelt justert */
 }
 
 footer div.studio_addresses {
-	margin-left: 33%; /* 300/940px; */
+	margin-left: 31%; /* manuelt justert */
 }
 
 footer  h3{
@@ -1187,16 +1200,109 @@ footer  .studio_addresses p{
     line-height: 1.29;
 }
 
-} /* ends media queries for #prizes and max-width: 500px */
+} /* ends media queries for #prizes and max-width: 800px */
 
-@media (max-width: 720px) {
+@media (max-width: 725px) {
 
-footer div.studio_addresses {
-	width: 42%; /* 360px((2*160px) + 2*20px)/940px; */
+footer div#intro{
+	width: 90.780141844%; /* 640((2*300px) + 2*20px)/705px; */
+	margin-left: 6%; /* justert manuelt tilpasset div.studio_addresses */
+	margin-top: 16px;
 }
 
-} /* ends media queries for #prizes and max-width: 700px */
+footer div#intro p{
+	float: left;
+	width: 46.875%; /* 300px/640px; */
+	padding-right: 3.125%; /* 20px/640px; */
+	outline: 0px solid red;
+}
 
+footer div.studio_addresses {
+	width: 62.4113475177%; /* 440px((2*200px) + 2*20px)/705px; */
+	margin-left: 20%; /* justert manuelt tilpasset div#intro */
+	margin-top: 10px;
+}
+
+footer div.vcard{
+	float: left;
+	width: 45.4545454545%; /* 200px/440; */
+	padding-right: 4.5454545455%; /* 20px/440; */
+	text-align: left;
+	outline: 0px solid red;
+	
+}
+
+} /* ends media queries for #prizes and max-width: 725px */
+
+@media (max-width: 615px) {
+
+footer div#intro{
+	width: 90.780141844%; /* 640((2*300px) + 2*20px)/705px; */
+	margin-left: 6%; /* justert manuelt tilpasset div.studio_addresses */
+	margin-top: 16px;
+}
+
+footer div#intro p{
+	float: left;
+	width: 46.875%; /* 300px/640px; */
+	padding-right: 3.125%; /* 20px/640px; */
+	outline: 0px solid red;
+}
+
+footer div.studio_addresses {
+	width: 62.4113475177%; /* 440px((2*200px) + 2*20px)/705px; */
+	margin-left: 20%; /* justert manuelt tilpasset div#intro */
+	margin-top: 10px;
+}
+
+footer div.vcard{
+	float: left;
+	width: 45.4545454545%; /* 200px/440; */
+	padding-right: 4.5454545455%; /* 20px/440; */
+	text-align: left;
+	outline: 0px solid red;
+	
+}
+
+} /* ends media queries for #prizes and max-width: 615px */
+
+@media (max-width: 500px) {
+
+footer div#intro{
+	width: 88%; /* 440(500 -20px)/500px; */
+	margin-left: auto; /* justert manuelt tilpasset div.studio_addresses */
+	margin-right: auto;
+	margin-top: 16px;
+}
+
+footer div#intro p{
+	float: none;
+	width: 100%; /* 300px/640px; */
+	padding-right: 0; /* 20px/640px; */
+	outline: 0px solid red;
+	text-align: center;
+}
+
+footer div#intro p:first-child{
+	margin-bottom: 10px;
+}
+
+footer div.studio_addresses {
+	width: 62.4113475177%; /* 440px((2*200px) + 2*20px)/705px; */
+	margin-left: 20%; /* justert manuelt tilpasset div#intro */
+	margin-top: 10px;
+}
+
+footer div.vcard{
+	float: left;
+	width: 45.4545454545%; /* 200px/440; */
+	padding-right: 4.5454545455%; /* 20px/440; */
+	text-align: left;
+	outline: 0px solid red;
+	
+}
+
+} /* ends media queries for #prizes and max-width: 500px */
 
 
 /* 14 GLOBAL OBJECTS 		============================================================================= */
