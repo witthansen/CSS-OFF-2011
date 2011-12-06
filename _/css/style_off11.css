@@ -202,10 +202,6 @@ header nav a {
 	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
 }
 
-#contestant h2 {
-	background: url(../img/checker_stripe_small.gif) 100% 8px no-repeat transparent;
-}
-
 #obstacles ul h3, #prizes h3 {
 	font-size: 14px;
 	line-height: 1;
@@ -1031,6 +1027,18 @@ nav select {
 	margin-bottom: 50px;
 	
 }
+
+#contestant h2:after {
+  content: "";
+  float: right;
+  width: 55.2127659574%; /* 519px/940x*/
+  height: 50px;
+  background: url(../img/checker_stripe_small.gif) 0 8px no-repeat transparent;
+  background-repeat: round no-repeat; /* for supporting browsers */
+}
+
+/* test av repeat round: http://tinkerbin.com/tIGsZObE */
+
 
 #contestant figure{
 	float: right;
