@@ -324,120 +324,7 @@ img {
 /* 6 TABLES 				============================================================================= */
 /* 7 FORMS 					============================================================================= */
 
-#contestant form{
-	width: 40.4255319149%; /*380px/940px*/
-	float: left;
-	outline: 0px solid black;
-	
-}
 
-#contestant form input#submit{
-	margin-top: 38px;
-	height: 155px;
-	outline: 0px solid red;
-	font-size: 26px;
-	background: transparent url(../img/slime_entry.png) no-repeat 50% 50%;
-	border: 0px;
-	-webkit-transform: rotate(-7.5deg);  /* text shadow som brukes på alt annet enn h1 heading */
-     -moz-transform: rotate(-7.5deg);  
-      -ms-transform: rotate(-7.5deg);  
-       -o-transform: rotate(-7.5deg);  
-          transform: rotate(-7.5deg);
-	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
-	opacity: 1;
-	-webkit-transition: all .4s ease-in-out;
-	   -moz-transition: all .4s ease-in-out;
-		 -o-transition: all .4s ease-in-out;
-		    transition: all .4s ease-in-out;
-}
-
-#contestant form input#submit:hover{
-	opacity: 0.75;
-	color: #FE6336;
-}
-
-#contestant form input{
-	width: 100%; /*380px/940px*/
-	padding: 12px 0 11px 10px; /* line-height er på 27px*/
-	margin-bottom: 16px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	background-color: #fe6336;
-	border: 0px;
-	
-}
-
-div#selects-row {
-	width: 100%; /*380px/940px*/
-	outline: 0px solid black;
-}
-
-#contestant form label.custom-select{
-	position: relative;
-    display: inline-block;
-	outline: 0px solid red;
-}
-
-#contestant form select{
-	width: 220px; /*380px/940px*/
-	height: auto;
-	padding: 11px 0 10px 10px; /* justerer paddingen for å sentrere teksten i elementet */
-	position: relative;
-    display: inline-block;
-	margin-bottom: 16px;
-	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
-	border-radius: 7px;
-	background-color: #fe6336;
-	border: 0px;
-}
-
-#contestant form select#gender{
-	width: 139px; /*380px/940px*/
-}
-
-#contestant form label.aside{
-	float: right;
-	margin-right: -9px; /* alignment 10px for å gjøre elementet 10px større som input-elementene med deres padding-left: 10px width: 100%. Trekker fra 1px fordi elementet som holder custom control icon bidrar med 1px */
-}
-
-.custom-select select {
-    outline:none; /* remove focus ring from Webkit */  
-    -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
-    }
-
-/* for Webkit's CSS-only solution to replace native control -webkit-appearance: none  */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-        .custom-select select {
-            padding-right:51px;    
-        }
-    }
-    
-/* Since we removed the default focus styles, we have to add our own */
-.custom-select select:focus {
-        -webkit-box-shadow: 0 0 3px 1px #c00;
-        -moz-box-shadow: 0 0 3px 1px #c00;
-        box-shadow: 0 0 3px 1px #c00;
-    }
-    
-/* Select arrow styling right: position to cover native drowdown control */
-.custom-select:after {
-    content: "";
-    position: absolute;
-    right: -1px;
-    top: 0;
-	display: block;
-    width: 51px;
-	height: 51px;
-    background: transparent url(../img/form_arrow.png) no-repeat;
-    pointer-events:none;
-    }
-    
-.no-pointer-events .custom-select:after {
-        content: none;
-    }
-	
 
 
 
@@ -574,6 +461,7 @@ nav select {
 
 #obstacles h2:after {
   content: "";
+  display: block;
   float: right;
   width: 70.7446808511%; /* 665px/940x*/
   height: 50px;
@@ -899,6 +787,7 @@ nav select {
 
 #prizes h2:after {
   content: "";
+  display: block;
   float: right;
   width: 70.7446808511%; /* 665px/940x*/
   height: 50px;
@@ -1016,6 +905,122 @@ nav select {
 
 /************ ny seksjon **********************/
 
+#contestant form{
+	width: 40.4255319149%; /*380px/940px*/
+	float: left;
+	outline: 0px solid black;
+	
+}
+
+#contestant form input#submit{
+	margin-top: 38px;
+	height: 155px;
+	outline: 0px solid red;
+	font-size: 26px;
+	background: transparent url(../img/slime_entry.png) no-repeat 50% 50%;
+	border: 0px;
+	-webkit-transform: rotate(-7.5deg);  /* text shadow som brukes på alt annet enn h1 heading */
+     -moz-transform: rotate(-7.5deg);  
+      -ms-transform: rotate(-7.5deg);  
+       -o-transform: rotate(-7.5deg);  
+          transform: rotate(-7.5deg);
+	text-shadow: hsla(0, 0%, 0%, 0.2) 3px 5px 0px;
+	opacity: 1;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+		 -o-transition: all .4s ease-in-out;
+		    transition: all .4s ease-in-out;
+}
+
+#contestant form input#submit:hover{
+	opacity: 0.75;
+	color: #FE6336;
+}
+
+#contestant form input{
+	width: 100%; /*380px/940px*/
+	padding: 12px 0 11px 10px; /* line-height er på 27px*/
+	margin-bottom: 16px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #fe6336;
+	border: 0px;
+	
+}
+
+div#selects-row {
+	width: 100%; /*380px/940px*/
+	outline: 0px solid black;
+}
+
+/* bruker en label som wrapper for å plassere nye ikoner på select input elementet */
+
+#contestant form label.custom-select{
+	width: 57.8947368421%; /*220px/380px*/
+	position: relative;
+    display: inline-block;
+	outline: 0px solid red;
+}
+
+#contestant form label.aside{
+	width: 36.5789473684%; /* 139px/380px*/
+	float: right;
+	margin-right: -9px; /* alignment 10px for å gjøre elementet 10px større som input-elementene med deres padding-left: 10px width: 100%. Trekker fra 1px fordi elementet som holder custom control icon bidrar med 1px */
+}
+
+/* hvert select element er 100% i bredd av label wrapper */
+
+#contestant form select{
+	width: 100%;
+	height: auto;
+	padding: 11px 0 10px 10px; /* justerer paddingen for å sentrere teksten i elementet */
+	position: relative;
+    display: inline-block;
+	margin-bottom: 16px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	background-color: #fe6336;
+	border: 0px;
+}
+
+.custom-select select {
+    outline:none; /* remove focus ring from Webkit */  
+    -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
+    }
+
+/* for Webkit's CSS-only solution to replace native control -webkit-appearance: none  */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+        .custom-select select {
+            padding-right:51px;    
+        }
+    }
+    
+/* Since we removed the default focus styles, we have to add our own */
+.custom-select select:focus {
+        -webkit-box-shadow: 0 0 3px 1px #c00;
+        -moz-box-shadow: 0 0 3px 1px #c00;
+        box-shadow: 0 0 3px 1px #c00;
+    }
+    
+/* Select arrow styling right: position to cover native drowdown control */
+.custom-select:after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: 0;
+	display: block;
+    width: 51px;
+	height: 51px;
+    background: transparent url(../img/form_arrow.png) no-repeat;
+    pointer-events:none;
+    }
+    
+.no-pointer-events .custom-select:after {
+        content: none;
+    }
+	
 #contestant {
 	background: url(../img/contestant_border_tile.png) 0 0 repeat-x, url(../img/blue_texture.png) 0 0 repeat #80c1d6; /* footer_border_tile er en del av grafikkken som er laget for overgangen mellom prizes og*/
 	padding-top: 50px;
@@ -1025,16 +1030,21 @@ nav select {
 /* spacing ned til innholdet */
 #contestant h2 {
 	margin-bottom: 50px;
-	
 }
 
 #contestant h2:after {
-  content: "";
-  float: right;
-  width: 55.2127659574%; /* 519px/940x*/
-  height: 50px;
-  background: url(../img/checker_stripe_small.gif) 0 8px no-repeat transparent;
-  background-repeat: round no-repeat; /* for supporting browsers */
+	content: "";
+	float: right;
+	display: block;
+	width: 55.2127659574%; /* 519px/940x*/
+	height: 0px;
+	-moz-border-image : url(../img/border-image.png) 40 round;
+	-webkit-border-image : url(../img/border-image.png) round;
+	border-image : url(../img/border-image.png) 40 round;
+	border-width : 40px 0 0 0;
+	margin-top: 8px;
+  /*background: url(../img/checker_stripe_small.gif) 0 8px no-repeat transparent;
+  background-repeat: round no-repeat; for supporting browsers */
 }
 
 /* test av repeat round: http://tinkerbin.com/tIGsZObE */
@@ -1044,14 +1054,12 @@ nav select {
 	float: right;
 	width: 41.0638297872%; /*386px/940px*/
 	padding-right: 30px;
-	
-}
-
-#contestant figure{
 	position: relative;
 	
 }
 
+
+/* posisjonering av tall for nedtelling */
 #contestant figure span{
 	position: absolute;
 	left: 20%; /*77px/386 */
@@ -1059,19 +1067,263 @@ nav select {
 	font-size: 140px;
 	color: #f4ea00;
 	text-shadow: hsla(0, 0%, 0%, 1) 7px 11px 0px;
-	
 }
 
 
 
 #contestant figcaption{
-	width: 6.2em;
+	width: 59.585492228%; /*230px/386px*/
 	margin: 54px auto 0;
 	
 }
 
+@media (max-width: 960px) {
+
+#contestant h2:after {
+	width: 50%; /* 519px/940x*/
+}
+
+/* gjør skjemaet bredere */
+
+#contestant form{
+	width: 44.7916666667%; /*430px/940px*/
+	float: left;
+	outline: 0px solid black;
+	
+}
+
+/* posisjonering av nedtelling */
+#contestant figure span{
+	left: 18%; /* manuell justering */
+	top: 70px;
+}
+
+/* size beneath counter */
+#contestant figcaption {
+    font-size: 36px;
+}
 
 
+} /* ends media queries for #prizes and max-width: 960px */
+
+
+@media (max-width: 870px) {
+
+#contestant h2:after {
+	width: 43%; /* 519px/940x*/
+}
+
+/* more space, reduced padding */
+#contestant figure{
+	padding-right: 10px;	
+}
+
+/* posisjonering av nedtelling */
+#contestant figure span{
+	left: 19%; /* manuell justering */
+	top: 65px;
+	font-size: 130px;
+}
+
+/* size beneath counter */
+#contestant figcaption {
+    font-size: 32px;
+	margin: 42px auto 0;
+}
+
+
+} /* ends media queries for #prizes and max-width: 870px */
+
+@media (max-width: 830px) {
+
+/* gjør skjemaet bredere */
+
+#contestant form{
+	width: 50%; /* manuell justering */
+	float: left;
+	outline: 0px solid black;
+	
+}
+
+#contestant form label.aside{
+	width: 40%; /* manuell justering */
+}
+
+/* posisjonering av nedtelling */
+#contestant figure span{
+	left: 19%; /* manuell justering */
+	top: 60px;
+	font-size: 120px;
+}
+
+/* size beneath counter */
+#contestant figcaption {
+    font-size: 30px;
+}
+
+} /* ends media queries for the form and max-width: 830px */
+
+@media (max-width: 770px) {
+
+#contestant h2:after {
+	width: 38%; /* 519px/940x*/
+}
+
+#contestant figure{
+	width: 38%; /* manuell justering*/	
+}
+
+/* posisjonering av nedtelling */
+#contestant figure span{
+	left: 20%; /* manuell justering */
+	top: 55px;
+	font-size: 100px;
+}
+
+/* size beneath counter */
+#contestant figcaption {
+    font-size: 30px;
+	width: 64%;
+	margin: 28px auto 0;
+}
+
+} /* ends media queries for #prizes and max-width: 770px */
+
+@media (max-width: 730px) {
+
+/* gjør skjemaet bredere */
+
+#contestant form{
+	width: 55%; /* manuell justering */
+	float: left;
+	outline: 0px solid black;
+	
+}
+
+/* posisjonering av nedtelling */
+#contestant figure span{
+	left: 19%; /* manuell justering */
+	top: 50px;
+	font-size: 96px;
+}
+
+/* size beneath counter */
+#contestant figcaption {
+    font-size: 28px;
+	width: 65%;
+}
+
+} /* ends media queries for the form and max-width: 730px */
+
+/* linearisering i denne media querien */
+
+@media (max-width: 680px) {
+
+#contestant form{
+	width: 60%; /* manuell justering */
+	float: none;
+	outline: 0px solid black;
+	margin: 42px auto 28px;
+	
+}
+
+/* alle skjema-elementer på hver sin linje */
+
+#contestant form label.custom-select{
+	width: 80%; /*220px/380px*/
+	position: relative;
+    display: block;
+	outline: 0px solid red;
+}
+
+
+#contestant form label.aside{
+	width: 80%;
+	float: none;
+	margin-right: -9px; /* alignment 10px for å gjøre elementet 10px større som input-elementene med deres padding-left: 10px width: 100%. Trekker fra 1px fordi elementet som holder custom control icon bidrar med 1px */
+}
+
+#contestant figure{
+	float: none;
+	outline: 0px solid black;
+	width: 45%; /* manuell justering */
+	margin: 42px auto 28px;
+}
+
+/* posisjonering av tall for nedtelling */
+#contestant figure span{
+	left: 19%; /* manuell justering */
+	top: 45px;
+	font-size: 92px;
+}
+
+#contestant figcaption{
+	font-size: 26px;
+	width: 64%;
+	
+}
+
+#contestant h2:after {
+	display: none;
+}
+
+#contestant h2 {
+	width: 404px;
+    margin: 0 auto;
+	
+}
+
+} /* ends media queries for #contestant 680px */
+
+@media (max-width: 560px) {
+
+#contestant form{
+	width: 70%; /* manuell justering */
+}
+
+/* posisjonering av tall for nedtelling */
+#contestant figure span{
+	left: 19%; /* manuell justering */
+	top: 45px;
+	font-size: 86px;
+}
+
+#contestant figcaption{
+	width: 72%;
+	
+}
+
+} /* ends media queries for #contestant 560px */
+
+@media (max-width: 510px) {
+
+#contestant h2 {
+    width: 300px; /* 404px/510px */
+	font-size: 30px;
+	outline: 1px solid red;
+}
+
+#contestant form{
+	width: 80%; /* manuell justering */
+}
+
+#contestant figure{
+	width: 215px;
+}
+
+/* posisjonering av tall for nedtelling */
+#contestant figure span{
+	left: 50px; /* manuell justering */
+	top: 50px;
+	font-size: 72px;
+}
+
+#contestant figcaption{
+	width: 90%;
+	
+}
+
+} /* ends media queries for #contestant 500px */
 
 /* 11 MAIN 					============================================================================= */
 
