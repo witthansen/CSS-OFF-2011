@@ -75,6 +75,14 @@ input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
 
 select, input, textarea {font: 99% sans-serif;}
 
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
 table {font-size: inherit; font: 100%;}
  
 /* Accessible focus treatment
@@ -132,7 +140,7 @@ body {font: 13px Helmet, Freesans, sans-serif;}
 /* using local fonts? make sure to read up on Paul Irish's 
 	Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
 
-/* we like off-black for text */
+/* we like white for text on contest page */
 body, select, input, textarea {color: #fff;}
 
 a {
@@ -152,6 +160,16 @@ a:hover {color: #fe6638;}
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: #fcd700; color: brown; text-shadow: none;}
 ::selection {background: #fcd700; color: brown; text-shadow: none;} 
+
+/* Custom placeholder text colors in forms */
+
+::-webkit-input-placeholder {
+   color: #fff;
+}
+
+:-moz-placeholder {
+   color: #fff;
+}
 
 /*	j.mp/webkit-tap-highlight-color */
 a:link {-webkit-tap-highlight-color: #fcd700;} 
@@ -179,7 +197,7 @@ body {
 /* headinger i navigasjon */
 h1 {
 	 font-size: 53px;
-	 line-height: 97%;
+	 line-height: 1;
 	 text-shadow: #fff 2px 4px 0px;
 	 outline: 0px solid red;
 	 }
@@ -473,6 +491,7 @@ nav select {
 
 
 #obstacles {
+	background: url(../img/orange_texture.png) 0 0 repeat #fe6638;
 	background: url(../img/orange_border_tile.png) 0 bottom repeat-x, url(../img/orange_border_tile.png) 0 0 repeat-x, url(../img/orange_texture.png) 0 0 repeat #fe6638;
 	padding-top: 45px;
 	
@@ -800,6 +819,7 @@ nav select {
 /************ ny seksjon **********************/
 
 #prizes {
+	background: url(../img/green_texture.png) 0 0 repeat #80b238;
 	background: url(../img/green_border_tile_c.png) 0 bottom repeat-x ,url(../img/orange_border_tile.png) 0 top repeat-x, url(../img/green_texture.png) 0 0 repeat #80b238;
 	padding-top: 50px;
 	
@@ -999,10 +1019,9 @@ div#selects-row {
 
 #contestant form select{
 	width: 100%;
-	height: auto;
+	height: 50px;
 	padding: 11px 0 10px 10px; /* justerer paddingen for å sentrere teksten i elementet */
-	position: relative;
-    display: inline-block;
+    display: block;
 	margin-bottom: 16px;
 	-webkit-border-radius: 7px;
 	-moz-border-radius: 7px;
@@ -1025,9 +1044,9 @@ div#selects-row {
     
 /* Since we removed the default focus styles, we have to add our own */
 .custom-select select:focus {
-        -webkit-box-shadow: 0 0 3px 1px #c00;
-        -moz-box-shadow: 0 0 3px 1px #c00;
-        box-shadow: 0 0 3px 1px #c00;
+        -webkit-box-shadow: 0px 0px 3px 1px #c00;
+        -moz-box-shadow: 0px 0px 3px 1px #c00;
+        box-shadow: 0px 0px 3px 1px #c00;
     }
     
 /* Select arrow styling right: position to cover native drowdown control */
@@ -1326,7 +1345,6 @@ div#selects-row {
 #contestant h2 {
     width: 300px; /* 404px/510px */
 	font-size: 30px;
-	outline: 1px solid red;
 }
 
 #contestant form{
