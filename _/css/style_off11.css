@@ -236,6 +236,30 @@ footer h2, footer h3{
 	
 }
 
+@media (max-width: 650px) {
+
+h1 {
+    font-size: 48px;
+    line-height: 97%;
+    outline: 0 solid red;
+    text-shadow: 2px 4px 0 #FFFFFF;
+}
+
+header h2 {
+    font-size: 18px;
+    line-height: 109%;
+}
+
+} /* ends media queries for headings and max-width: 650px */
+
+@media (max-width: 400px) {
+
+
+
+} /* ends media queries for headings and max-width: 500px */
+
+
+
 /* 3 TYPOGRAPHY 			============================================================================= */
 
 @font-face { 
@@ -324,16 +348,8 @@ img {
 /* 6 TABLES 				============================================================================= */
 /* 7 FORMS 					============================================================================= */
 
-
-
-
-
-
 /* 8 HEADER 				============================================================================= */
 
-header {
-	  
-}
 
 /* padding som skal holde på logoen */
 
@@ -348,12 +364,14 @@ header hgroup{
 header h1{
 	  color: #fe6537;
 	  text-align: center;
+	  margin-left: 10px;
+	  margin-right: 10px;
 	  
 }
 
 header h2{
 	 text-align: center;
-	 margin: 26px 0 80px 0;
+	 margin: 26px 10px 80px;
 	  
 }
 
@@ -370,6 +388,14 @@ header hgroup span {
 	 z-index: 2;
 	  
 }
+
+@media (max-width: 500px) {
+
+header hgroup{
+	  background-position: 70% 41px;
+}
+
+} /* ends media queries for #prizes and max-width: 500px */
 
 
 
